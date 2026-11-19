@@ -1,0 +1,8 @@
+# Model weights (large, reproducible via src/train.py)
+models/**/*.safetensors
+*.safetensors
+*.bin
+# Python
+__pycache__/
+*.pyc
+.venv/

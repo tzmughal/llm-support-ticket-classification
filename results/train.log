@@ -1,0 +1,29 @@
+train=800 test=200
+Training baseline (TF-IDF + Logistic Regression)...
+baseline accuracy=1.0000 macro-F1=1.0000
+Fine-tuning DistilBERT end-to-end...
+Loading weights:   0%|          | 0/100 [00:00<?, ?it/s]Loading weights:  31%|███       | 31/100 [00:00<00:00, 221.25it/s]Loading weights:  54%|█████▍    | 54/100 [00:00<00:00, 202.17it/s]Loading weights: 100%|██████████| 100/100 [00:00<00:00, 284.61it/s]
+[transformers] [1mDistilBertForSequenceClassification LOAD REPORT[0m from: distilbert-base-uncased
+Key                     | Status     | 
+------------------------+------------+-
+vocab_transform.weight  | UNEXPECTED | 
+vocab_layer_norm.weight | UNEXPECTED | 
+vocab_transform.bias    | UNEXPECTED | 
+vocab_layer_norm.bias   | UNEXPECTED | 
+vocab_projector.bias    | UNEXPECTED | 
+pre_classifier.bias     | MISSING    | 
+pre_classifier.weight   | MISSING    | 
+classifier.weight       | MISSING    | 
+classifier.bias         | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+trainable parameters: 66,956,548 / 66,956,548
+epoch 1/2  mean loss 0.9454  elapsed 427s
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  2.09it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  2.09it/s]
+epoch 2/2  mean loss 0.2172  elapsed 657s
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.20it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.18it/s]
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.47it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.36it/s]
+distilbert accuracy=1.0000 macro-F1=1.0000
+wrote /home/hatch/workspace/portfolio/llm-support-ticket-classification/results/metrics.json

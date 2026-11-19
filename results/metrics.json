@@ -1,0 +1,131 @@
+{
+  "dataset": "synthetic support tickets (seed 42), 1000 tickets, 250 per class",
+  "train_size": 800,
+  "test_size": 200,
+  "labels": [
+    "Account",
+    "Billing",
+    "Delivery",
+    "Technical"
+  ],
+  "baseline": {
+    "accuracy": 1.0,
+    "macro_f1": 1.0,
+    "weighted_f1": 1.0,
+    "per_class_f1": {
+      "Account": 1.0,
+      "Billing": 1.0,
+      "Delivery": 1.0,
+      "Technical": 1.0
+    },
+    "per_class_precision": {
+      "Account": 1.0,
+      "Billing": 1.0,
+      "Delivery": 1.0,
+      "Technical": 1.0
+    },
+    "per_class_recall": {
+      "Account": 1.0,
+      "Billing": 1.0,
+      "Delivery": 1.0,
+      "Technical": 1.0
+    },
+    "confusion_matrix": [
+      [
+        50,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        50,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        50,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        50
+      ]
+    ],
+    "labels": [
+      "Account",
+      "Billing",
+      "Delivery",
+      "Technical"
+    ],
+    "model": "TF-IDF (1-2 grams, 5000 features) + Logistic Regression",
+    "test_size": 200
+  },
+  "fine_tuned": {
+    "accuracy": 1.0,
+    "macro_f1": 1.0,
+    "weighted_f1": 1.0,
+    "per_class_f1": {
+      "Account": 1.0,
+      "Billing": 1.0,
+      "Delivery": 1.0,
+      "Technical": 1.0
+    },
+    "per_class_precision": {
+      "Account": 1.0,
+      "Billing": 1.0,
+      "Delivery": 1.0,
+      "Technical": 1.0
+    },
+    "per_class_recall": {
+      "Account": 1.0,
+      "Billing": 1.0,
+      "Delivery": 1.0,
+      "Technical": 1.0
+    },
+    "confusion_matrix": [
+      [
+        50,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        50,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        50,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        50
+      ]
+    ],
+    "labels": [
+      "Account",
+      "Billing",
+      "Delivery",
+      "Technical"
+    ],
+    "model": "DistilBERT (distilbert-base-uncased), fine-tuned end-to-end",
+    "test_size": 200,
+    "epochs": 2,
+    "batch_size": 16,
+    "learning_rate": 2e-05,
+    "max_len": 64,
+    "trainable_parameters": 66956548,
+    "training_seconds": 671.6
+  }
+}
